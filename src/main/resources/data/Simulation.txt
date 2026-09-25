@@ -1,0 +1,219 @@
+Test subjects for simulation
+! USERNAME IS CODICE FISCLAE !!
+
+1. ADMIN:
+	username: admin
+	password: @admin123
+	email: info.velyalifeteam@gmail.com <email u create>
+##############################################################################################################################
+2. DOCTORS:
+	name: Charles
+	last name: Dixon
+	DOB: September 10, 1985
+	place of birth: Trento, Italia
+	codice fiscale: DXNCRL85P10L378O
+	sex: M
+	tel. number: 913-301-0149
+	email: CharlesDixon@jourrapide.com
+	pasword: 4Hz_25zE
+	---------------------------------------------------------------------
+	name: Violetta
+	last name: Castiglione
+	DOB: July 18, 1996
+	place of birth: Milano, Italia
+	codice fiscale: CSTVTT96L58F205N
+	sex: F
+	tel. number: 0319 0223676
+	email: ViolettaCastiglione@armyspy.com
+	pasword: #E-p41K3
+	---------------------------------------------------------------------
+	name: Manuel
+	last name: Bellucci
+	DOB: February 8, 1991
+	place of birth: Verona, Italia
+	codice fiscale: BLLMNL91B08L781F
+	sex: M
+	tel. number: 0384 3888064
+	email: ManuelBellucci@armyspy.com
+	pasword: H@f0f6e5
+	-------------------------------------------------------------------------
+	name: Noemi
+	last name: Cremonesi
+	DOB: August 6, 1990
+	place of birth: Rimini, Italia
+	codice fiscale: CRMNMO90M46H294R
+	sex: F
+	tel. number: 0326 7646948
+	email: NoemiCremonesi@teleworm.us
+	pasword: F-877p#4
+	--------------------------------------------------------------------------
+	name: Caroline
+	last name: Rossi
+	DOB: April 13, 1995
+	place of birth: Rimini, Italia
+	codice fiscale: RSSCLN95D53H294C
+	sex: F
+	tel. number: 05.03.32.79.97
+	email: CarolineRossi@teleworm.us
+	pasword: 1Y&D9a79
+##############################################################################################################################        
+3. PATIENTS:
+	name: Samantha
+	last name: Moss
+	DOB: May 22, 2015
+	place of birth: Brisbane, Australia
+	codice fiscale: MSSSNT15E62Z700R
+	sex: F
+	weight: 35 kg
+	smoker: no
+	drinker: no 
+	risk factors: pediatric onset, potential genetic predisposition (family history), and lifestyle-related factors associated with early-onset metabolic shifts.
+	refDoctor: DXNCRL85P10L378O
+	doctor's note:
+	tel. number: (02) 4049 2010
+	email: SamanthaMoss@teleworm.us
+	pasword: M2#E8_v8
+	--------------------------------------------------------------
+	name: Christopher
+	last name: Wyatt
+	DOB: March 24, 1962
+	place of birth: Melbourne, Australia
+	codice fiscale: WYTCRS62C24Z700I
+	sex: M
+	weight: 80 kg
+	smoker: yes
+	drinker: no
+	risk factors: older age (born in 1962), overweight status (80 kg), and chronic tobacco smoking.
+	refDoctor: DXNCRL85P10L378O
+	doctor's note:
+	tel. number: (02) 4966 8626
+	email: ChristopherWyatt@dayrep.com
+	pasword: kNs@A069
+	--------------------------------------------------------------
+	name: Enrico
+	last name: Arcuri
+	DOB: March 16, 2004
+	place of birth: Torino, Italia
+	codice fiscale: RCRNRC04C16L219B
+	sex: M
+	weight: 79 kg
+	smoker: no
+	drinker: yes
+	risk factors: regular alcohol consumption (drinker) and early adulthood metabolic screening requirements.
+	refDoctor: CSTVTT96L58F205N
+	doctor's note:
+	tel. number: 0333 7753120
+	email: EnricoArcuri@teleworm.us
+	pasword: wE#U02O6
+	--------------------------------------------------------------
+	name: Romeo
+	last name: Endrizzi
+	DOB: August 2, 1971
+	place of birth: Roma, Italia
+	codice fiscale: NDRRMO71M02H501L
+	sex: M
+	weight: 70 kg
+	smoker: no
+	drinker: no
+	risk factors: middle age, lifestyle factors, and metabolic monitoring based on age cohort.
+	refDoctor: CSTVTT96L58F205N
+	doctor's note:
+	tel. number: 0312 4492879
+	email: RomeoEndrizzi@armyspy.com
+	pasword: 381Gq9q-
+	--------------------------------------------------------------
+	name: Igino
+	last name: Ricci
+	DOB: June 28, 1999
+	place of birth: Trento, Italia
+	codice fiscale: RCCGNI99H28L378F
+	sex: M
+	weight: 80 kg
+	smoker: yes
+	drinker: yes
+	risk factors: combined tobacco smoking and heavy alcohol use (drinker).
+	refDoctor: BLLMNL91B08L781F
+	doctor's note:
+	tel. number: 0362 9977916
+	email: IginoRicci@teleworm.us
+	pasword: u8&kl8V3
+	--------------------------------------------------------------
+	name: Alessandro
+	last name:  Zetticci
+	DOB: July 17, 1990
+	place of birth: Verona, Italia
+	codice fiscale: ZTTLSN90L17L781P
+	sex: M
+	weight: 80 kg
+	smoker: yes
+	drinker: yes
+	risk factors: active tobacco smoking and alcohol consumption (drinker).
+	refDoctor: BLLMNL91B08L781F
+	doctor's note:
+	tel. number: 0313 7766174
+	email: AlessandroZetticci@teleworm.us
+	pasword: zA013_M1
+	--------------------------------------------------------------
+	name: Cristina
+	last name:  De Luca
+	DOB: September 5, 1977
+	place of birth: Verona, Italia
+	codice fiscale: DLCCST77P45L781G
+	sex: F
+	weight: 60 kg
+	smoker: yes
+	drinker: no
+	risk factors: tobacco smoking and age-related metabolic changes.
+	refDoctor: BLLMNL91B08L781F
+	doctor's note:
+	tel. number: 0333 5634787
+	email: CristinaDeLuca@armyspy.com
+	pasword: 1P62r&&p
+	--------------------------------------------------------------
+	name: Rosetta
+	last name: Moretti
+	DOB: October 20, 1980
+	place of birth: napoli, Italia
+	codice fiscale: MRTRTT80R60F839Z
+	sex: F
+	weight: 65 kg
+	smoker: no
+	drinker: no
+	risk factors: baseline age-related metabolic risk profile.
+	refDoctor: CRMNMO90M46H294R
+	doctor's note:
+	tel. number: 0378 6231137
+	email: RosettaMoretti@dayrep.com
+	pasword: 1C8-5Ctn
+	--------------------------------------------------------------
+	name: Marta
+	last name: Milani
+	DOB: November 13, 1963
+	place of birth: Catania, Italia
+	codice fiscale: MLNMRT63S53C351O
+	sex: F
+	weight: 55 kg
+	smoker: yes
+	drinker: yes 
+	risk factors: older age, active tobacco smoking, and regular alcohol consumption (drinker).
+	refDoctor: CRMNMO90M46H294R
+	doctor's note:
+	tel. number: 0377 8846999
+	email: MartaMilani@teleworm.us
+	pasword: T69#4x3@
+	--------------------------------------------------------------
+	name: Maddalena
+	last name: Folliero
+	DOB: June 14, 2011
+	place of birth: ancona, Italia
+	codice fiscale: FLLMDL11H54A271Y
+	sex: F
+	weight: 35 kg 
+	smoker: no
+	drinker: no
+	risk factors: pediatric onset and metabolic surveillance needs during growth.
+	refDoctor: CRMNMO90M46H294R
+	doctor's note:
+	tel. number: 0359 5073216
+	email: MaddalenaFolliero@jourrapide.com
+	pasword: -8_uL5v1

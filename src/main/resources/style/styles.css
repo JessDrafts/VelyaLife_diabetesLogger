@@ -1,0 +1,78 @@
+
+.root {
+    -fx-font-family: "Arial";
+}
+
+.homePage {
+    -fx-padding: 15px; 
+    -fx-spacing: 10px; 
+}
+#HomepageVBox {
+	-fx-alignment: CENTER;
+	-fx-spacing: 30.0;
+}
+/* Buttons */
+.buttons {
+	-fx-background-color: #38989c;
+	-fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-min-width: 100px;
+    -fx-background-radius: 8;
+}
+.buttons:hover {
+	-fx-cursor: hand;
+}
+.logout-button {
+	-fx-font-family: "Arial";
+    -fx-background-color: #f0f4f3;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 30;
+    -fx-padding: 6 14 6 14;
+    -fx-alignment: CENTER_RIGHT;
+}
+.logout-button:hover {
+    -fx-background-color: #e2e8e7;
+    -fx-cursor: hand;
+}
+.myButtons {
+	-fx-background-color: transparent;
+	-fx-font-family: "Arial";
+	-fx-font-weight: bold;
+}
+.myButtons:hover {
+	-fx-cursor: hand;
+}
+
+.choiceBox {
+  	-fx-mark-color: #2a3b4c;
+  	-fx-background-radius: 8;
+}
+.choice-box .menu-item:focused { -fx-background-color: #2a3b4c; }
+.choice-box .menu-item:focused > .label { -fx-text-fill: white; }
+
+/* menu */
+.sidebar{
+    -fx-background-color: #38989c;
+    -fx-background-radius: 0px 50px 0px 0px;
+}
+.sidebar-btn{
+    -fx-background-color: transparent;
+}
+.sidebar-btn-text{
+    -fx-text-fill: #A2BEE8;
+}
+.sidebar-btn:hover .sidebar-btn-text{
+    -fx-text-fill:#7AA2E7;
+    -fx-cursor: hand;
+}
+
+.container {
+    -fx-background-color: white;
+}
+
+.container2 {
+    -fx-background-color: #38989c;
+    -fx-background-radius: 8;
+}

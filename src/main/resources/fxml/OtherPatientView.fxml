@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OtherPatientController">
+
+   <!-- Sidebar -->
+   <left>
+      <fx:include fx:id="sidebar" source="DoctorSidebarView.fxml" />
+   </left>
+
+   <center>
+      <VBox alignment="CENTER" spacing="15.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <Label text="All Patients List">
+            <font>
+               <Font name="Arial Black" size="18.0" />
+            </font>
+         </Label>
+         <TableView fx:id="patientTable" VBox.vgrow="ALWAYS">
+            <columns>
+               <TableColumn fx:id="nameColumn" prefWidth="120.0" text="Name" />
+               <TableColumn fx:id="lastNameColumn" prefWidth="120.0" text="Last name" />
+               <TableColumn fx:id="codiceFiscaleColumn" prefWidth="120.0" text="Codice Fiscale" />
+               <TableColumn fx:id="actionColumn" prefWidth="100.0" text="Actions" />
+            </columns>
+            <columnResizePolicy>
+               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+         </TableView>
+      </VBox>
+   </center>
+</BorderPane>

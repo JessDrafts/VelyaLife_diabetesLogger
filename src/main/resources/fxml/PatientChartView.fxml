@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="718.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PatientChartController">
+    <!-- Sidebar -->
+    <left>
+        <fx:include fx:id="sidebar" source="PatientSidebarView.fxml" />
+    </left>
+
+    <!-- Center Content -->
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="729.0" prefWidth="800.0" spacing="15" BorderPane.alignment="CENTER">
+            <Label prefHeight="84.0" prefWidth="172.0" text="My Chart" textFill="#38989c">
+                <font>
+                    <Font name="Arial Bold" size="40.0" />
+                </font>
+            </Label>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+                <HBox prefHeight="154.0" prefWidth="812.0">
+                    <VBox prefHeight="163.0" prefWidth="722.0" spacing="5.0" styleClass="card">
+                        <padding>
+                            <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                        </padding>
+                        <Label text="Patient Information">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="17.0" prefWidth="701.0" spacing="30.0">
+                            <Label fx:id="cfLabel" text="Codice Fiscale: -" />
+                            <Label fx:id="nameLabel" text="Name: -" />
+                            <Label fx:id="ageLabel" text="Date of Birth: -" />
+                        </HBox>
+                        <HBox prefHeight="17.0" prefWidth="701.0" spacing="30.0">
+                            <Label fx:id="weightLabel" text="Weight: -" />
+                            <Label fx:id="sexLabel" text="Sex:-" />
+                        </HBox>
+                        <HBox spacing="30.0">
+                            <Label fx:id="smokeLabel" prefHeight="17.0" prefWidth="73.0" text="Smoker: -" />
+                            <Label fx:id="drinkLabel" prefHeight="17.0" prefWidth="68.0" text="Drinker: -" />
+                        </HBox>
+                    </VBox>
+                    <VBox prefHeight="185.0" prefWidth="598.0" spacing="5.0" styleClass="card">
+                        <padding>
+                            <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                        </padding>
+                        <Label text="Doctor Information">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="17.0" prefWidth="701.0" spacing="30.0">
+                            <Label fx:id="docCfLabel" text="Codice Fiscale: -" />
+                            <Label fx:id="docNameLabel" text="Name: -" />
+                        </HBox>
+                        <HBox spacing="30.0" />
+                        <HBox spacing="30.0" />
+                    </VBox>
+                </HBox>
+                <HBox spacing="30.0">
+                    <Label text="Medical information">
+                        <font>
+                            <Font name="System Bold" size="16.0" />
+                        </font>
+                        <HBox.margin>
+                            <Insets left="10.0" />
+                        </HBox.margin>
+                    </Label>
+                </HBox>
+                <Label fx:id="riskFactorLabel" prefHeight="17.0" prefWidth="799.0" text="Risk factors:-" wrapText="true">
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Label fx:id="doctorNoteLabel" prefHeight="17.0" prefWidth="807.0" text="Doctor's note:" wrapText="true">
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </VBox.margin>
+                </Label>
+            </VBox>
+
+            <VBox prefHeight="440.0" prefWidth="812.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                    <Label prefHeight="20.0" prefWidth="116.0" text="Glycemia Trend">
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                  <HBox.margin>
+                     <Insets left="20.0" />
+                  </HBox.margin>
+                    </Label>
+                    <ChoiceBox fx:id="periodChoiceBox" prefWidth="150.0" />
+                </HBox>
+
+                <HBox prefHeight="362.0" prefWidth="812.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                    <LineChart fx:id="glycemiaChart" prefHeight="422.0" prefWidth="499.0" HBox.hgrow="ALWAYS">
+                        <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis side="LEFT" />
+                        </yAxis>
+                    </LineChart>
+
+                    <VBox prefHeight="450.0" prefWidth="273.0" spacing="5.0">
+                        <Label text="All Measurements">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <TableView fx:id="measurementsTable" prefHeight="425.0" prefWidth="309.0" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="dateColumn" prefWidth="144.0" text="Date" />
+                                <TableColumn fx:id="detailColumn" prefWidth="122.5" text="Action" />
+                            </columns>
+                        </TableView>
+                  <HBox.margin>
+                     <Insets right="30.0" />
+                  </HBox.margin>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <HBox alignment="CENTER_RIGHT">
+                <Button mnemonicParsing="false" onAction="#handleDownloadPdf" styleClass="buttons" stylesheets="@../style/styles.css" text="Download Report (PDF)" textFill="WHITE">
+               <HBox.margin>
+                  <Insets bottom="10.0" right="30.0" />
+               </HBox.margin></Button>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

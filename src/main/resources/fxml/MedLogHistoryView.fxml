@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MedLogHistoryController">
+
+   <!-- Sidebar -->
+   <left>
+      <fx:include fx:id="sidebar" source="AdminSidebarView.fxml" />
+   </left>
+
+   <center>
+      <VBox alignment="CENTER" spacing="15.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <Label text="Doctor activity Log" textFill="#030303">
+            <font>
+               <Font name="Arial Black" size="18.0" />
+            </font>
+         </Label>
+
+         <TableView fx:id="medLogTable" VBox.vgrow="ALWAYS">
+            <columns>
+               <TableColumn fx:id="idColumn" prefWidth="70.0" text="ID" />
+               <TableColumn fx:id="doctorNameColumn" prefWidth="180.0" text="Name" />
+               <TableColumn fx:id="doctorLastNameColumn" prefWidth="180.0" text="Last name" />
+               <TableColumn fx:id="doctorCfColumn" prefWidth="220.0" text="Codice Fiscale" />
+               <TableColumn fx:id="actionColumn" prefWidth="100.0" text="Actions" />
+            </columns>
+            <columnResizePolicy>
+               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+         </TableView>
+      </VBox>
+   </center>
+</BorderPane>

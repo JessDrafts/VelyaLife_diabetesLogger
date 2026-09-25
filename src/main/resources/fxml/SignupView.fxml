@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxWidth="708.0" prefHeight="550.0" prefWidth="708.0" styleClass="card, container"
+      xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.SignupController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+   </padding>
+   <Label text="Sign Up" textAlignment="CENTER">
+      <font>
+         <Font name="System Bold" size="24.0"/>
+      </font>
+      <VBox.margin>
+         <Insets bottom="20.0"/>
+      </VBox.margin>
+   </Label>
+
+   <Label fx:id="statusLabel" styleClass="alert-danger" text="Status message goes here" visible="false"
+          wrapText="true">
+      <VBox.margin>
+         <Insets bottom="10.0"/>
+      </VBox.margin>
+   </Label>
+
+   <!-- User type-->
+   <HBox prefHeight="24.0" prefWidth="176.0" spacing="10.0">
+      <VBox.margin>
+         <Insets bottom="15.0"/>
+      </VBox.margin>
+      <Label prefHeight="25.0" prefWidth="82.0" text="User type" textAlignment="RIGHT">
+         <padding>
+            <Insets left="20.0"/>
+         </padding>
+         <font>
+            <Font name="System Bold" size="12.0"/>
+         </font>
+      </Label>
+      <ChoiceBox fx:id="userTypeField" prefHeight="25.0" prefWidth="113.0" styleClass="choiceBox"
+                 stylesheets="@../style/styles.css"/>
+   </HBox>
+
+   <HBox prefHeight="58.0" prefWidth="668.0">
+      <VBox.margin>
+         <Insets bottom="10.0"/>
+      </VBox.margin>
+      <VBox spacing="10.0">
+         <HBox.margin>
+            <Insets right="20.0"/>
+         </HBox.margin>
+         <Label prefHeight="22.0" prefWidth="148.0" styleClass="form-label" text="Name"/>
+         <TextField fx:id="nameField" prefHeight="14.0" prefWidth="149.0" styleClass="form-control"/>
+      </VBox>
+      <VBox spacing="10.0">
+         <HBox.margin>
+            <Insets right="20.0"/>
+         </HBox.margin>
+         <Label prefHeight="23.0" prefWidth="149.0" styleClass="form-label" text="Last name"/>
+         <TextField fx:id="lastNameField" prefHeight="15.0" prefWidth="149.0" styleClass="form-control"/>
+      </VBox>
+      <VBox prefHeight="40.0" prefWidth="176.0" spacing="10.0">
+         <Label prefHeight="46.0" prefWidth="100.0" styleClass="form-label" text="Codice Fiscale"/>
+         <TextField fx:id="codiceFiscaleField" prefHeight="19.0" prefWidth="176.0"/>
+      </VBox>
+   </HBox>
+
+   <HBox layoutX="30.0" layoutY="313.0" prefHeight="58.0" prefWidth="668.0">
+      <VBox.margin>
+         <Insets bottom="10.0"/>
+      </VBox.margin>
+      <VBox spacing="10.0">
+         <HBox.margin>
+            <Insets right="20.0"/>
+         </HBox.margin>
+         <Label prefHeight="29.0" prefWidth="148.0" styleClass="form-label" text="Date of birth"/>
+         <TextField fx:id="dateBirthField" promptText="DD/MM/YYYY" styleClass="form-control"/>
+      </VBox>
+      <VBox prefHeight="58.0" prefWidth="206.0" spacing="10.0">
+         <HBox.margin>
+            <Insets right="20.0"/>
+         </HBox.margin>
+         <Label prefHeight="23.0" prefWidth="149.0" styleClass="form-label" text="Place of birth"/>
+         <TextField fx:id="placeBirthField" promptText="Comune if italian - empty otherwise"
+                    styleClass="form-control"/>
+      </VBox>
+      <VBox spacing="10.0">
+         <HBox.margin>
+            <Insets right="20.0"/>
+         </HBox.margin>
+         <Label prefHeight="23.0" prefWidth="149.0" styleClass="form-label" text="Nationality"/>
+         <TextField fx:id="nationalityField" promptText="Country " styleClass="form-control"/>
+      </VBox>
+      <VBox prefHeight="58.0" prefWidth="59.0" spacing="10.0">
+         <Label prefHeight="23.0" prefWidth="149.0" styleClass="form-label" text="Sex"/>
+         <TextField fx:id="sexField" prefHeight="25.0" prefWidth="58.0" promptText="F or M"
+                    styleClass="form-control"/>
+      </VBox>
+   </HBox>
+
+   <HBox layoutX="30.0" layoutY="223.0" prefHeight="58.0" prefWidth="668.0">
+      <VBox.margin>
+         <Insets bottom="10.0"/>
+      </VBox.margin>
+      <VBox spacing="10.0">
+         <HBox.margin>
+            <Insets right="20.0"/>
+         </HBox.margin>
+         <Label prefHeight="33.0" prefWidth="88.0" styleClass="form-label" text="Email"/>
+         <TextField fx:id="emailField"/>
+      </VBox>
+      <VBox spacing="10.0">
+         <HBox.margin>
+            <Insets right="5.0"/>
+         </HBox.margin>
+         <Label prefHeight="23.0" prefWidth="149.0" styleClass="form-label" text="Phone number"/>
+         <TextField fx:id="phoneField" styleClass="form-control"/>
+      </VBox>
+   </HBox>
+
+   <!-- Patient only field -->
+   <VBox fx:id="patientFieldsContainer" managed="false" spacing="10.0" visible="false">
+      <VBox.margin>
+         <Insets bottom="15.0"/>
+      </VBox.margin>
+      <HBox prefHeight="58.0" prefWidth="668.0" spacing="20.0">
+         <VBox spacing="10.0">
+            <Label styleClass="form-label" text="Weight (kg)"/>
+            <TextField fx:id="weightField" promptText="es. 70" styleClass="form-control"/>
+         </VBox>
+         <VBox spacing="10.0">
+            <Label styleClass="form-label" text="Smoker"/>
+            <CheckBox fx:id="smokerCheckBox" text="Yes"/>
+         </VBox>
+         <VBox spacing="10.0">
+            <Label styleClass="form-label" text="Drinker"/>
+            <CheckBox fx:id="drinkerCheckBox" text="Yes"/>
+         </VBox>
+         <VBox spacing="10.0">
+            <Label styleClass="form-label" text="Assigned Doctor"/>
+            <ComboBox fx:id="doctorComboBox" prefWidth="180.0" promptText="Select a doctor"
+                      styleClass="form-control"/>
+         </VBox>
+      </HBox>
+      <VBox spacing="10.0">
+         <Label styleClass="form-label" text="Risk factors"/>
+         <TextArea fx:id="riskFactorsArea" prefHeight="50.0" wrapText="true"/>
+      </VBox>
+   </VBox>
+
+   <Button defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleRegister"
+           styleClass="buttons" stylesheets="@../style/styles.css" text="Sign Up">
+      <VBox.margin>
+         <Insets bottom="10.0" top="10.0"/>
+      </VBox.margin>
+   </Button>
+   <HBox alignment="CENTER">
+      <Label text="Back to Dashboard: ">
+         <font>
+            <Font name="System Bold" size="12.0"/>
+         </font>
+      </Label>
+      <Hyperlink onAction="#handleBackToDashboard" stylesheets="@../style/styles.css" text="Back"/>
+   </HBox>
+</VBox>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/java/repository/DailyLogRepository.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repository/DoctorRepository.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repository/MedLogHistoryRepository.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repository/MedicalConditionRepository.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repository/NotificationRepository.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repository/PatientRepository.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repository/TherapyRepository.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/main/java/repository/UserRepository.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/main/java/utility/DBInit.java" dialect="GenericSQL" />
+    <file url="PROJECT" dialect="SQLite" />
+  </component>
+</project>

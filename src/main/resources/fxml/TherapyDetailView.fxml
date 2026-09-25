@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="620.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TherapyDetailController">
+   <VBox alignment="TOP_CENTER" spacing="15.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+      <padding>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </padding>
+      <Label text="Patient therapy view" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+
+      <GridPane hgap="10.0" prefHeight="131.0" prefWidth="520.0" vgap="10.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="100.0" prefWidth="139.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="470.0" minWidth="200.0" prefWidth="450.5" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <Label text="ID Therapy:" textFill="#555555">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="idField" editable="false" GridPane.columnIndex="1" />
+
+         <Label text="Patient:" textFill="#555555" GridPane.rowIndex="1">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="patientField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+         <Label text="Patient's Ref. Doctor:" textFill="#555555" GridPane.rowIndex="2">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="patientDoctorField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin>
+      </GridPane>
+      <Separator prefHeight="12.0" prefWidth="600.0" />
+      <GridPane hgap="10.0" prefHeight="321.0" prefWidth="600.0" vgap="10.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="100.0" prefWidth="123.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.0" minWidth="200.0" prefWidth="467.0"/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="25.5" minHeight="19.5" prefHeight="19.5" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="40.5" minHeight="19.5" prefHeight="19.5" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="41.0" minHeight="21.5" prefHeight="21.5" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="38.5" minHeight="18.0" prefHeight="18.0" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="42.5" minHeight="19.5" prefHeight="19.5" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="41.0" minHeight="23.0" prefHeight="23.0" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="37.0" minHeight="30.0" prefHeight="37.0" vgrow="SOMETIMES"/>
+         </rowConstraints>
+         <VBox.margin>
+            <Insets bottom="40.0"/>
+         </VBox.margin>
+         <Label text="Prescription:" textFill="#555555">
+            <font>
+               <Font name="System Bold" size="13.0"/>
+            </font>
+         </Label>
+         <TextField fx:id="drugField" editable="false" GridPane.columnIndex="1"/>
+         <Label text="Daily Dose:" textFill="#555555" GridPane.rowIndex="1">
+            <font>
+               <Font name="System Bold" size="13.0"/>
+            </font>
+         </Label>
+         <TextField fx:id="dailyDoseField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+         <Label text="Amount per dose:" textFill="#555555" GridPane.rowIndex="2">
+            <font>
+               <Font name="System Bold" size="13.0"/>
+            </font>
+         </Label>
+         <TextField fx:id="amountField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+         <Label text="Start date:" textFill="#555555" GridPane.rowIndex="3">
+            <font>
+               <Font name="System Bold" size="13.0"/>
+            </font>
+         </Label>
+         <TextField fx:id="startdateField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+         <Label text="End date:" textFill="#555555" GridPane.rowIndex="4">
+            <font>
+               <Font name="System Bold" size="13.0"/>
+            </font>
+         </Label>
+         <TextField fx:id="enddateField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+         <Label text="Prescribing Doctor:" textFill="#555555" GridPane.rowIndex="5">
+            <font>
+               <Font name="System Bold" size="13.0"/>
+            </font>
+         </Label>
+         <TextField fx:id="prescDocField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+         <Label text="Instructions:" textFill="#555555" GridPane.rowIndex="6">
+            <font>
+               <Font name="System Bold" size="13.0"/>
+            </font>
+         </Label>
+         <TextField fx:id="instructionField" editable="false" prefHeight="40.0" prefWidth="467.0"
+                    GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+      </GridPane>
+
+      <HBox alignment="CENTER_RIGHT" spacing="10.0">
+         <Button fx:id="closeButton" mnemonicParsing="false" onAction="#handleClose" prefWidth="90.0" styleClass="buttons" stylesheets="@../style/styles.css" text="Close" />
+      </HBox>
+   </VBox>
+</AnchorPane>

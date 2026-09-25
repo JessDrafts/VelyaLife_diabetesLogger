@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PatientTherapyController">
+
+   <!-- Sidebar -->
+   <left>
+      <fx:include fx:id="sidebar" source="PatientSidebarView.fxml" />
+   </left>
+
+   <center>
+      <VBox fx:id="therapyManagementSection" alignment="TOP_CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+
+         <Label text="Therapy" textFill="#38989c">
+            <font>
+               <Font name="System Bold" size="24.0" />
+            </font>
+         </Label>
+         <TableView fx:id="therapyTable" prefHeight="607.0" prefWidth="670.0">
+            <columns>
+               <TableColumn fx:id="idColumn" prefWidth="59.0" text="ID" />
+               <TableColumn fx:id="nameColumn" prefWidth="271.5" text="Prescrition" />
+               <TableColumn fx:id="statusColumn" prefWidth="164.5" text="Active" />
+               <TableColumn fx:id="actionColumn" prefWidth="100.0" text="Actions" />
+            </columns>
+            <columnResizePolicy>
+               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+         </TableView>
+
+      </VBox>
+   </center>
+</BorderPane>

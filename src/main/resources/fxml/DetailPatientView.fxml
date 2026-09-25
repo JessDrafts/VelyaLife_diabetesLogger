@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1489.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DetailPatientController">
+   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1486.0" prefWidth="946.0">
+      <VBox alignment="TOP_CENTER" layoutX="-3.0" layoutY="-1.0" prefHeight="1489.0" prefWidth="951.0" spacing="15">
+         <Label prefHeight="57.0" text="Patient Chart" textFill="#38989c">
+            <font>
+               <Font name="Arial Bold" size="40.0" />
+            </font>
+         </Label>
+         <VBox prefWidth="937.0" spacing="10.0">
+            <HBox prefWidth="868.0" spacing="15.0">
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+               <VBox prefHeight="89.0" prefWidth="546.0" spacing="5.0" styleClass="card">
+                  <padding>
+                     <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                  </padding>
+                  <Label text="Patient Information">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox spacing="20.0">
+                     <Label fx:id="cfLabel" text="Codice Fiscale: -" />
+                     <Label fx:id="nameLabel" text="Name: -" />
+                     <Label fx:id="ageLabel" text="Date of Birth: -" />
+                  </HBox>
+                  <HBox spacing="20.0">
+                     <Label fx:id="sexLabel" text="Sex: -" />
+                     <Label fx:id="weightLabel" text="Weight: -" />
+                     <Label fx:id="smokeLabel" text="Smoker: -" />
+                     <Label fx:id="drinkLabel" text="Drinker: -" />
+                  </HBox>
+               </VBox>
+               <VBox prefHeight="89.0" prefWidth="332.0" spacing="5.0" styleClass="card">
+                  <padding>
+                     <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                  </padding>
+                  <Label text="Attending Doctor Information">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="17.0" prefWidth="310.0" spacing="20.0">
+                     <Label fx:id="docCfLabel" prefHeight="17.0" prefWidth="307.0" text="Codice Fiscale: -" />
+                  </HBox>
+                  <Label fx:id="docNameLabel" prefHeight="17.0" prefWidth="311.0" text="Name: -" />
+               </VBox>
+            </HBox>
+            <VBox spacing="5.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+               <Label text="Medical Information">
+                  <font>
+                     <Font name="System Bold" size="16.0" />
+                  </font>
+               </Label>
+               <HBox alignment="CENTER_LEFT" spacing="10.0">
+                  <children>
+                     <TextArea fx:id="riskFactorArea" prefHeight="70.0" prefWidth="730.0" promptText="Enter risk fators..." wrapText="true" />
+                     <Button mnemonicParsing="false" onAction="#handleSaveRiskFactor" prefHeight="35.0" prefWidth="120.0" styleClass="buttons" stylesheets="@../style/styles.css" text="Edit" />
+                  </children>
+               </HBox>
+            </VBox>
+            <VBox spacing="5.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+               <Label text="Doctor's Note:">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font>
+               </Label>
+               <HBox alignment="CENTER_LEFT" spacing="10.0">
+                  <TextArea fx:id="doctorNoteArea" prefHeight="70.0" prefWidth="730.0" promptText="Enter doctor notes here...(add doctor name)" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#handleSaveDoctorNote" prefHeight="35.0" prefWidth="120.0" styleClass="buttons" stylesheets="@../style/styles.css" text="Edit" />
+               </HBox>
+            </VBox>
+         </VBox>
+         <VBox prefHeight="350.0" prefWidth="937.0" spacing="10.0" VBox.vgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+               <Label text="Glycemia Trend">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets left="20.0" />
+                  </HBox.margin>
+               </Label>
+               <ChoiceBox fx:id="periodChoiceBox" prefWidth="150.0" />
+            </HBox>
+            <HBox prefHeight="239.0" prefWidth="937.0" spacing="20.0" VBox.vgrow="ALWAYS">
+               <LineChart fx:id="glycemiaChart" prefHeight="300.0" prefWidth="499.0" HBox.hgrow="ALWAYS">
+                  <xAxis>
+                     <CategoryAxis side="BOTTOM" />
+                  </xAxis>
+                  <yAxis>
+                     <NumberAxis side="LEFT" />
+                  </yAxis>
+               </LineChart>
+               <VBox prefHeight="307.0" prefWidth="320.0" spacing="5.0">
+                  <HBox.margin>
+                     <Insets right="10.0" />
+                  </HBox.margin>
+                  <Label text="All Measurements">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="measurementsTable" prefHeight="282.0" prefWidth="313.0" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="dateColumn" prefWidth="150.0" text="Date" />
+                        <TableColumn fx:id="detailColumn" prefWidth="166.0" text="Action" />
+                     </columns>
+                  </TableView>
+               </VBox>
+            </HBox>
+         </VBox>
+         <Separator prefHeight="10.0" prefWidth="937.0" />
+         <Label text="Therapy List">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <TableView fx:id="therapyTable" prefHeight="180.0" prefWidth="897.0">
+            <columns>
+               <TableColumn fx:id="therapyColumn" prefWidth="250.0" text="Therapy" />
+               <TableColumn fx:id="terDateColumn" prefWidth="180.0" text="Date" />
+               <TableColumn fx:id="statusColumn" prefWidth="300.0" text="Status" />
+               <TableColumn fx:id="terActionColumn" prefWidth="175.5" text="Action" />
+            </columns>
+            <VBox.margin>
+               <Insets left="20.0" right="20.0" />
+            </VBox.margin>
+         </TableView>
+         <Button fx:id="addTherapyButton" mnemonicParsing="false" onAction="#handleAddTherapy" styleClass="buttons" stylesheets="@../style/styles.css" text="Add Therapy" textFill="WHITE" />
+         <Separator prefHeight="10.0" prefWidth="937.0" />
+         <Label text="Medical Conditions">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <TableView fx:id="medConditionTable" prefHeight="180.0" prefWidth="897.0">
+            <columns>
+               <TableColumn fx:id="typeColumn" prefWidth="150.0" text="Type" />
+               <TableColumn fx:id="nameColumn1" prefWidth="130.0" text="Name" />
+               <TableColumn fx:id="startDateColumn" prefWidth="130.0" text="Start Date" />
+               <TableColumn fx:id="endDateColumn" prefWidth="157.0" text="End Date" />
+               <TableColumn fx:id="medDetailColumn" maxWidth="337.0" prefWidth="337.0" text="Description" />
+            </columns>
+            <VBox.margin>
+               <Insets left="20.0" right="20.0" />
+            </VBox.margin>
+         </TableView>
+         <Separator prefHeight="10.0" prefWidth="937.0" />
+         <Label text="Other Doctor's Interventions">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <TableView fx:id="docLogTable" prefHeight="180.0" prefWidth="897.0">
+            <columns>
+               <TableColumn fx:id="doctorColumn" prefWidth="220.0" text="Doctor" />
+               <TableColumn fx:id="docDateColumn" prefWidth="180.0" text="Date" />
+               <TableColumn fx:id="changeColumn" prefWidth="316.0" text="Changes Made" />
+               <TableColumn fx:id="docActionColumn" prefWidth="186.0" text="Action" />
+            </columns>
+            <VBox.margin>
+               <Insets bottom="5.0" left="20.0" right="20.0" />
+            </VBox.margin>
+         </TableView>
+         <HBox alignment="CENTER_RIGHT">
+            <Button mnemonicParsing="false" onAction="#handleDownloadPdf" styleClass="buttons" stylesheets="@../style/styles.css" text="Download Report (PDF)" textFill="WHITE">
+               <HBox.margin>
+                  <Insets bottom="10.0" right="30.0" />
+               </HBox.margin>
+            </Button>
+         </HBox>
+      </VBox>
+   </AnchorPane>
+</ScrollPane>

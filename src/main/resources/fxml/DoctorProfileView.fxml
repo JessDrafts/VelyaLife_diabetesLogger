@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0"
+            prefWidth="1011.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.DoctorProfileController">
+   <AnchorPane layoutY="16.0" prefHeight="684.0" prefWidth="998.0">
+      <ScrollPane prefHeight="683.0" prefWidth="998.0">
+         <AnchorPane prefHeight="680.0" prefWidth="984.0" styleClass="buttons" stylesheets="@../style/styles.css">
+            <AnchorPane layoutX="25.0" layoutY="10.0" prefHeight="656.0" prefWidth="946.0" styleClass="buttons"
+                        stylesheets="@../style/styles.css">
+               <VBox layoutX="34.0" layoutY="7.0" prefHeight="602.0" prefWidth="853.0" spacing="20.0"
+                     styleClass="container" stylesheets="@../style/styles.css">
+                  <padding>
+                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                  </padding>
+                  <Label prefHeight="35.0" prefWidth="177.0" text="My Account" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="24.0"/>
+                     </font>
+                  </Label>
+                  <Separator prefWidth="200.0"/>
+                  <VBox prefHeight="57.0" prefWidth="587.0" styleClass="card">
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="15.0"/>
+                     </padding>
+                     <Label prefHeight="20.0" prefWidth="187.0" styleClass="card-header"
+                            text="Personal information">
+                        <font>
+                           <Font name="System Bold" size="14.0"/>
+                        </font>
+                     </Label>
+                     <VBox spacing="10.0">
+                        <padding>
+                           <Insets top="10.0"/>
+                        </padding>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <Label styleClass="form-label" text="Username:"/>
+                           <Label fx:id="usernameLabel" text="username"/>
+                        </HBox>
+                     </VBox>
+                  </VBox>
+                  <VBox prefHeight="426.0" prefWidth="813.0" styleClass="card">
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0"/>
+                     </padding>
+                     <Label prefHeight="17.0" prefWidth="120.0" styleClass="card-header"
+                            text="Account Details">
+                        <font>
+                           <Font name="System Bold" size="14.0"/>
+                        </font>
+                     </Label>
+                     <Label fx:id="statusLabel" prefHeight="17.0" prefWidth="420.0"
+                            styleClass="alert-success" text="Status message" visible="false"
+                            wrapText="true">
+                        <VBox.margin>
+                           <Insets bottom="10.0" top="10.0"/>
+                        </VBox.margin>
+                     </Label>
+                     <HBox prefHeight="56.0" prefWidth="557.0">
+                        <VBox.margin>
+                           <Insets bottom="10.0"/>
+                        </VBox.margin>
+                        <VBox prefHeight="62.0" prefWidth="178.0" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0"/>
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                           <Label styleClass="form-label" text="Name"/>
+                           <TextField fx:id="NameField" editable="false"/>
+                        </VBox>
+                        <VBox prefHeight="62.0" prefWidth="178.0" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0"/>
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                           <Label styleClass="form-label" text="Last name"/>
+                           <TextField fx:id="LastNameField" editable="false"/>
+                        </VBox>
+                        <VBox prefHeight="62.0" prefWidth="178.0" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0"/>
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                           <Label styleClass="form-label" text="Date of birth"/>
+                           <DatePicker fx:id="BirthDateField" disable="true"/>
+                        </VBox>
+                        <VBox prefHeight="62.0" prefWidth="93.0" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0"/>
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                           <Label styleClass="form-label" text="Sex"/>
+                           <ChoiceBox fx:id="SexField" disable="true" prefWidth="150.0"
+                                      styleClass="choiceBox"
+                                      stylesheets="@../style/styles.css"/>
+                        </VBox>
+                        <VBox prefHeight="62.0" prefWidth="140.0" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0"/>
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                        </VBox>
+                     </HBox>
+                     <HBox prefHeight="56.0" prefWidth="557.0">
+                        <VBox.margin>
+                           <Insets bottom="10.0" top="10.0"/>
+                        </VBox.margin>
+                        <VBox prefHeight="62.0" prefWidth="178.0" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0"/>
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                           <Label styleClass="form-label" text="Codice fiscale"/>
+                           <TextField fx:id="CodiceFiscaleField" editable="false"/>
+                        </VBox>
+                        <VBox prefHeight="62.0" prefWidth="178.0" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0"/>
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                           <Label styleClass="form-label" text="Place of birth"/>
+                           <TextField fx:id="PalceofBithrField" editable="false"/>
+                        </VBox>
+                        <VBox prefHeight="62.0" prefWidth="178.0" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0"/>
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                           <Label styleClass="form-label" text="Nationality"/>
+                           <TextField fx:id="NationalityField" editable="false"/>
+                        </VBox>
+                     </HBox>
+                     <VBox fx:id="passwordBox" managed="false" spacing="10.0" visible="false">
+                        <VBox spacing="10.0">
+                           <padding>
+                              <Insets top="10.0"/>
+                           </padding>
+                           <Label styleClass="form-label" text="New Password"/>
+                           <PasswordField fx:id="newPasswordField"
+                                          promptText="Enter new password"
+                                          styleClass="form-control"/>
+                        </VBox>
+                        <VBox spacing="10.0">
+                           <padding>
+                              <Insets top="10.0"/>
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0"/>
+                           </VBox.margin>
+                           <Label styleClass="form-label" text="Confirm New Password"/>
+                           <PasswordField fx:id="confirmPasswordField"
+                                          promptText="Confirm new password"
+                                          styleClass="form-control"/>
+                        </VBox>
+                     </VBox>
+                     <HBox prefHeight="56.0" prefWidth="557.0">
+                        <VBox prefHeight="62.0" prefWidth="178.0" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0"/>
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                           <Label styleClass="form-label" text="Email"/>
+                           <TextField fx:id="EmailField" editable="false"/>
+                        </VBox>
+                        <VBox prefHeight="62.0" prefWidth="178.0" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0"/>
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                           <Label styleClass="form-label" text="Phone number"/>
+                           <TextField fx:id="TelNumberField" editable="false"/>
+                        </VBox>
+                     </HBox>
+                     <HBox prefHeight="46.0" prefWidth="783.0" spacing="20.0">
+                        <padding>
+                           <Insets top="50.0"/>
+                        </padding>
+                        <Button fx:id="editButton" mnemonicParsing="false"
+                                onAction="#handleEnableEdit" prefHeight="29.0" prefWidth="115.0"
+                                styleClass="buttons" stylesheets="@../style/styles.css"
+                                text="Edit Profile" textFill="WHITE"/>
+                        <Button fx:id="saveButton" disable="true" mnemonicParsing="false"
+                                onAction="#handleUpdateProfile" prefHeight="29.0" prefWidth="115.0"
+                                styleClass="buttons" stylesheets="@../style/styles.css" text="Save"
+                                textFill="WHITE"/>
+                        <Button mnemonicParsing="false" onAction="#handleBackToDashboard"
+                                prefHeight="37.0" prefWidth="224.0" styleClass="buttons"
+                                stylesheets="@../style/styles.css" text="Back to Dashboard"
+                                textFill="WHITE"/>
+                     </HBox>
+                  </VBox>
+               </VBox>
+            </AnchorPane>
+         </AnchorPane>
+      </ScrollPane>
+   </AnchorPane>
+</AnchorPane>

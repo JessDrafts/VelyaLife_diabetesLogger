@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PatientDashboardController">
+
+   <!-- Sidebar -->
+   <left>
+      <fx:include fx:id="sidebar" source="PatientSidebarView.fxml" />
+   </left>
+
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="584.0" prefWidth="660.0" spacing="15" BorderPane.alignment="CENTER">
+         <Label prefHeight="70.0" text="My Dashboard" textFill="#38989c">
+            <font>
+               <Font name="Arial Bold" size="40.0" />
+            </font>
+         </Label>
+         <VBox alignment="CENTER" spacing="20.0" VBox.vgrow="ALWAYS">
+            <padding>
+               <Insets bottom="10.0" left="15.0" right="15.0" top="5.0" />
+            </padding>
+
+            <!-- (Log Glycemia, Therapy, My chart) -->
+            <HBox alignment="CENTER" spacing="25.0">
+               <StackPane prefHeight="180.0" prefWidth="200.0" style="-fx-border-radius: 0 30 0 0; -fx-border-color: #F1F2F7; -fx-background-color: white;">
+                  <effect><DropShadow color="#9a9696" /></effect>
+                  <VBox alignment="CENTER" onMouseClicked="#handleDailyLog" spacing="12" styleClass="container" stylesheets="@../style/styles.css">
+                     <ImageView fitHeight="95.0" fitWidth="85.0" onMouseClicked="#handleDailyLog" preserveRatio="true">
+                        <Image url="@../img/bloodsugar_log_noBg.png" />
+                     </ImageView>
+                     <Button mnemonicParsing="false" onAction="#handleDailyLog" styleClass="myButtons" stylesheets="@../style/styles.css" text="Log Glycemia" />
+                  </VBox>
+               </StackPane>
+
+               <StackPane prefHeight="180.0" prefWidth="200.0" style="-fx-border-radius: 0 30 0 0; -fx-border-color: #F1F2F7; -fx-background-color: white;">
+                  <effect><DropShadow color="#9a9696" /></effect>
+                  <VBox alignment="CENTER" onMouseClicked="#handleTherapy" spacing="12" styleClass="container" stylesheets="@../style/styles.css">
+                     <ImageView fitHeight="95.0" fitWidth="75.0" onMouseClicked="#handleTherapy" preserveRatio="true">
+                        <Image url="@../img/meds_noBg.png" />
+                     </ImageView>
+                     <Button mnemonicParsing="false" onAction="#handleTherapy" styleClass="myButtons" stylesheets="@../style/styles.css" text="Therapy" />
+                  </VBox>
+               </StackPane>
+
+               <StackPane prefHeight="180.0" prefWidth="200.0" style="-fx-border-radius: 0 30 0 0; -fx-border-color: #F1F2F7; -fx-background-color: white;">
+                  <effect><DropShadow color="#9a9696" /></effect>
+                  <VBox alignment="CENTER" onMouseClicked="#handleChart" spacing="12" styleClass="container" stylesheets="@../style/styles.css">
+                     <ImageView fitHeight="90.0" fitWidth="75.0" onMouseClicked="#handleChart" preserveRatio="true">
+                        <Image url="@../img/med_log_noBg.png" />
+                     </ImageView>
+                     <Button mnemonicParsing="false" onAction="#handleChart" styleClass="myButtons" stylesheets="@../style/styles.css" text="My chart" />
+                  </VBox>
+               </StackPane>
+            </HBox>
+
+            <!-- (Messages, Contacts) -->
+            <HBox alignment="CENTER" spacing="25.0">
+               <StackPane prefHeight="180.0" prefWidth="200.0" style="-fx-border-radius: 0 30 0 0; -fx-border-color: #F1F2F7; -fx-background-color: white;">
+                  <effect><DropShadow color="#9a9696" /></effect>
+                  <VBox alignment="CENTER" onMouseClicked="#handleNotification" spacing="12" styleClass="container" stylesheets="@../style/styles.css">
+                     <ImageView fitHeight="85.0" fitWidth="85.0" onMouseClicked="#handleNotification" preserveRatio="true">
+                        <Image url="@../img/notification_noBg.png" />
+                     </ImageView>
+                     <Button mnemonicParsing="false" onAction="#handleNotification" styleClass="myButtons" stylesheets="@../style/styles.css" text="Messages" />
+                  </VBox>
+               </StackPane>
+
+               <StackPane prefHeight="180.0" prefWidth="200.0" style="-fx-border-radius: 0 30 0 0; -fx-border-color: #F1F2F7; -fx-background-color: white;">
+                  <effect><DropShadow color="#9a9696" /></effect>
+                  <VBox alignment="CENTER" onMouseClicked="#handleContacts" spacing="12" styleClass="container" stylesheets="@../style/styles.css">
+                     <ImageView fitHeight="90.0" fitWidth="75.0" onMouseClicked="#handleContacts" preserveRatio="true">
+                        <Image url="@../img/info_noBg.png" />
+                     </ImageView>
+                     <Button mnemonicParsing="false" onAction="#handleContacts" styleClass="myButtons" stylesheets="@../style/styles.css" text="Contacts" />
+                  </VBox>
+               </StackPane>
+            </HBox>
+         </VBox>
+      </VBox>
+   </center>
+</BorderPane>

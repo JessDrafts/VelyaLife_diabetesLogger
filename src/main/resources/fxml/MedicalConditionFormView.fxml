@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefWidth="400.0" spacing="15.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MedicalConditionFormController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="Medical Conditions &amp; Symptoms" textFill="#38989c">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <GridPane hgap="10.0" vgap="12.0">
+        <Label text="Type:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <ComboBox fx:id="typeComboBox" prefWidth="200.0" promptText="Select" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="nameField" promptText="Ex. Stress" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="descriptionField" promptText="Details" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Start:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="startDateField" promptText="2026-01-01" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label prefHeight="17.0" prefWidth="91.0" text="End (optional):" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="endDateField" promptText="2026-06-01" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+    <Button mnemonicParsing="false" onAction="#handleSave" styleClass="buttons" stylesheets="@../style/styles.css" text="Save" />
+</VBox>

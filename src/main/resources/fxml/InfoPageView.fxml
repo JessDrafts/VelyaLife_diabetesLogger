@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InfoPageController">
+
+   <!-- Sidebar -->
+   <left>
+      <fx:include fx:id="sidebar" source="PatientSidebarView.fxml" />
+   </left>
+
+   <center>
+      <VBox alignment="TOP_CENTER" spacing="20" BorderPane.alignment="CENTER">
+         <Label text="Contact Information" textFill="#38989c">
+            <font>
+               <Font name="System Bold" size="24.0" />
+            </font>
+         </Label>
+         <HBox prefHeight="29.0" prefWidth="620.0">
+            <Label prefHeight="29.0" prefWidth="251.0" text="My doctor's information">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </HBox>
+         <HBox prefHeight="17.0" prefWidth="620.0">
+            <Label prefHeight="17.0" prefWidth="44.0" text="Name:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="nameField" prefHeight="17.0" prefWidth="198.0" text="Name" />
+         </HBox>
+         <HBox prefHeight="15.0" prefWidth="620.0">
+            <Label prefHeight="17.0" prefWidth="88.0" text="Codice Fiscale:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="codiceFiscaleField" prefHeight="17.0" prefWidth="220.0" text="codice fiscale" />
+         </HBox>
+         <HBox prefHeight="14.0" prefWidth="620.0">
+            <Label prefHeight="17.0" prefWidth="43.0" text="Email:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="emailField" prefHeight="17.0" prefWidth="241.0" text="email" />
+         </HBox>
+         <HBox prefHeight="16.0" prefWidth="620.0">
+            <Label prefHeight="17.0" prefWidth="95.0" text="Phone number:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="telField" prefHeight="17.0" prefWidth="223.0" text="phone number" />
+         </HBox>
+         <Separator prefWidth="200.0" />
+         <HBox prefHeight="30.0" prefWidth="620.0">
+            <Label prefHeight="29.0" prefWidth="251.0" text="VelyaLife Center's information">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </HBox>
+         <HBox prefHeight="16.0" prefWidth="620.0">
+            <Label prefHeight="17.0" prefWidth="205.0" text="Phone number: 045 4982374 ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </HBox>
+         <HBox prefHeight="18.0" prefWidth="620.0">
+            <Label prefHeight="17.0" prefWidth="218.0" text="email: inforvelyalife@gmail.com">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </HBox>
+         <HBox prefHeight="21.0" prefWidth="620.0">
+            <Label prefHeight="17.0" prefWidth="190.0" text="Office hours:">
+               <HBox.margin>
+                  <Insets right="100.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="152.0" text="Client service hours:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </HBox>
+         <HBox prefHeight="66.0" prefWidth="620.0">
+            <VBox prefHeight="68.0" prefWidth="218.0">
+               <HBox.margin>
+                  <Insets right="75.0" />
+               </HBox.margin>
+               <Label prefHeight="17.0" prefWidth="195.0" text="Monday - Frieday:  8:00 - 12:00 ">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="17.0" prefWidth="194.0" text="                                 14:00 - 18:00">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="17.0" prefWidth="189.0" text="Saturday:                 8:00 - 13:00">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="17.0" prefWidth="173.0" text="Sunday:                   closed">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+            </VBox>
+            <VBox prefHeight="72.0" prefWidth="250.0">
+               <Label prefHeight="17.0" prefWidth="248.0" text="Monday - Frieday:  8:00 - 12:00">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="17.0" prefWidth="182.0" text="Saturday:                 8:00 - 12:00">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="17.0" prefWidth="176.0" text="Sunday:                   closed">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+            </VBox>
+         </HBox>
+      
+      <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   	</padding>
+      
+      </VBox>
+   </center>
+</BorderPane>

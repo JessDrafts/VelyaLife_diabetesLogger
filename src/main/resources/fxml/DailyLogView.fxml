@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DailyLogController">
+
+   <!-- Sidebar -->
+   <left>
+      <fx:include fx:id="sidebar" source="PatientSidebarView.fxml" />
+   </left>
+
+   <center>
+      <VBox fx:id="reportManagementSection" alignment="TOP_CENTER" spacing="15.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+
+         <Label text="Daily Logs" textFill="#38989c">
+            <font>
+               <Font name="System Bold" size="22.0" />
+            </font>
+         </Label>
+         <VBox prefHeight="602.0" prefWidth="668.0" spacing="20.0">
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+
+            <VBox prefHeight="239.0" prefWidth="648.0" spacing="8.0" styleClass="card">
+               <Label text="Daily Logs: Blood sugar level" textFill="#545352">
+                  <font>
+                     <Font name="System Bold" size="15.0" />
+                  </font>
+               </Label>
+
+               <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+                  <VBox fx:id="dailyLogListContainer" prefHeight="193.0" prefWidth="648.0" spacing="10.0"/>
+               </ScrollPane>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#handleLog" styleClass="buttons" stylesheets="@../style/styles.css" text="New Log" />
+            <Separator prefHeight="8.0" prefWidth="635.0" styleClass="buttons" stylesheets="@../style/styles.css" />
+
+            <VBox prefHeight="227.0" prefWidth="650.0" spacing="8.0" styleClass="card">
+               <Label text="Medica conditions &amp; symptoms" textFill="#545352">
+                  <font>
+                     <Font name="System Bold" size="15.0" />
+                  </font>
+               </Label>
+               <ScrollPane fitToWidth="true">
+                  <VBox fx:id="medicalConditionListContainer" prefHeight="171.0" prefWidth="648.0" spacing="10.0"/>
+               </ScrollPane>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#handleNewCondition" styleClass="buttons" stylesheets="@../style/styles.css" text="New Medical condition" />
+
+         </VBox>
+
+      </VBox>
+   </center>
+</BorderPane>

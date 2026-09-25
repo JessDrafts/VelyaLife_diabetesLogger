@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <AnchorPane prefHeight="548.0" prefWidth="790.0">
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="521.0" prefWidth="763.0" styleClass="container" stylesheets="@../style/styles.css">
+         <AnchorPane layoutX="19.0" layoutY="13.0" prefHeight="496.0" prefWidth="725.0" styleClass="container2" stylesheets="@../style/styles.css">
+            <VBox alignment="CENTER" layoutX="120.0" layoutY="36.0" maxWidth="485.0" prefHeight="425.0" prefWidth="485.0" styleClass="card, container">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <Label text="Login" textAlignment="CENTER">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="36.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="20.0" />
+                  </VBox.margin>
+               </Label>
+               <Separator prefWidth="200.0" />
+               <Label fx:id="statusLabel" styleClass="alert-danger" text="Status message goes here" visible="false" wrapText="true">
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Label>
+               <VBox spacing="10.0">
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+                  <Label styleClass="form-label" text="Username" />
+                  <TextField fx:id="usernameField" prefHeight="25.0" prefWidth="415.0" styleClass="form-control" />
+               </VBox>
+               <VBox spacing="10.0">
+                  <VBox.margin>
+                     <Insets bottom="15.0" />
+                  </VBox.margin>
+                  <Label styleClass="form-label" text="Password" />
+                  <PasswordField fx:id="passwordField" styleClass="form-control" />
+                  <TextField fx:id="visiblePasswordField" managed="false" promptText="Password" visible="false" />
+               </VBox>
+               <CheckBox fx:id="showPasswordBtn" mnemonicParsing="false" text="Show Password">
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </CheckBox>
+               <HBox prefHeight="24.0" prefWidth="176.0">
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+                  <Label prefHeight="25.0" prefWidth="65.0" text="User type" textAlignment="CENTER" />
+                  <ChoiceBox fx:id="UserTypeField" prefHeight="33.0" prefWidth="113.0" styleClass="choiceBox" stylesheets="@../style/styles.css" />
+               </HBox>
+               <Button defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleLogin" styleClass="buttons" stylesheets="@../style/styles.css" text="Login">
+                  <VBox.margin>
+                     <Insets bottom="10.0" top="10.0" />
+                  </VBox.margin>
+               </Button>
+               <HBox alignment="CENTER" />
+            </VBox>
+         </AnchorPane>
+      </AnchorPane>
+   </AnchorPane>
+</AnchorPane>

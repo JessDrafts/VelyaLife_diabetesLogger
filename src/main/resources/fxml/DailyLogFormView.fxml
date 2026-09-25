@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefWidth="400.0" spacing="15.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DailyLogFormController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="New Log" textFill="#38989c">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <GridPane hgap="10.0" vgap="12.0">
+        <Label prefHeight="17.0" prefWidth="121.0" text="Glycemia (mg/dL):" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="bloodSugarField" promptText="Ex. 110.5" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Before meal: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <CheckBox fx:id="beforeMealCheckBox" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Medicine:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <ComboBox fx:id="drugComboBox" prefWidth="200.0" promptText="Select" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Dose intaken:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="amountField" promptText="Ex. 1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+    <Button mnemonicParsing="false" onAction="#handleSave" styleClass="buttons" stylesheets="@../style/styles.css" text="Save" />
+</VBox>
