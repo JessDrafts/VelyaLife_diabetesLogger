@@ -1,6 +1,8 @@
 # VelyaLife
 
-This project was made for the Software engineering course of the University of Verona year 2024/2025. The version presented here is an upgraded version of the original one. for the original one read This site was built using [RELAZIONE INGEGNERIA DEL SOFTWARE_V1.pdf]([https://pages.github.com/](https://github.com/JessDrafts/VelyaLife_diabetesLogger/blob/main/documentation/RELAZIONE%20INGEGNERIA%20DEL%20SOFTWARE_V1.pdf)
+This project was made for the Software engineering course of the University of Verona year 2024/2025. The version presented here is an upgraded version of the original one.
+For the original one read This site was built using [RELAZIONE INGEGNERIA DEL SOFTWARE_V1.pdf](https://github.com/JessDrafts/VelyaLife_diabetesLogger/blob/main/documentation/RELAZIONE%20INGEGNERIA%20DEL%20SOFTWARE_V1.pdf).
+
 This is a system made for diabetes patients.
 
 # ⚙️Features 
