@@ -25,7 +25,7 @@ public class AdminCreator extends AbstractUser{
         UserRepository userRepo = VelyaLifeApplication.getUserRepository();
         UserService userService = new UserService();
         if (!userRepo.usernameExists("admin")) {
-            AdminCreator admin = new AdminCreator("admin", BCrypt.hashpw("@admin123", BCrypt.gensalt()), "info.velyalifeteam@gmail.com");
+            AdminCreator admin = new AdminCreator("admin", BCrypt.hashpw("@admin123", BCrypt.gensalt()), "info.velyalife@gmail.com");
             userService.registerUserToDb(admin);
         }
     }
